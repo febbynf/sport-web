@@ -71,6 +71,11 @@ a.link-secondary {
 .btn-icon {
     @apply w-[52px] h-[52px] flex items-center justify-center cursor-pointer;
 }
+
+.btn-outline {
+    @apply border border-gray-200;
+}
+
 .btn-accent {
     @apply bg-accent hover:bg-accent-hover transition-all duration-300;
 }
