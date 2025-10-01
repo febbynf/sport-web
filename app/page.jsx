@@ -7,8 +7,8 @@ const Home = () => {
     return (
         <div className="w-full max-w-[1440px] mx-auto overflow-hidden bg-white">
             <Topbar />
-            <Hero />
             <Header />
+            <Hero />
             <Latest />
             <div className="h-[4000px]">
 

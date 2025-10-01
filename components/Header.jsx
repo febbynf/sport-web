@@ -2,12 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaHeart } from "react-icons/fa";
 import { FaCartShopping} from "react-icons/fa6";
-import Sidebar from "./Sidenav";
 import Sidenav from "./Sidenav";
 
 
 const Header = () => {
-    return <header className="xl:absolute max-w-[1440px] mx-auto left-0 right-0 ">
+    return <header className="xl:absolute max-w-[1440px] mx-auto left-0 right-0 bg-gray-50">
             <div className="container mx-auto">
                 <div className="flex justify-between items-center py-10">
                     <div className="flex items-center justify-between w-full md:w-auto gap-8">

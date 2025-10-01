@@ -32,6 +32,30 @@ const products = [
         description: "Description of Lorem ipsum",
         price: 120,
     },
+    {
+        image: "/assets/img/latest/p1.png",
+        name: "Lorem ipsum",
+        description: "Description of Lorem ipsum",
+        price: 120,
+    },
+    {
+        image: "/assets/img/latest/p2.png",
+        name: "Lorem ipsum",
+        description: "Description of Lorem ipsum",
+        price: 120,
+    },
+    {
+        image: "/assets/img/latest/p3.png",
+        name: "Lorem ipsum",
+        description: "Description of Lorem ipsum",
+        price: 120,
+    },
+    {
+        image: "/assets/img/latest/p4.png",
+        name: "Lorem ipsum",
+        description: "Description of Lorem ipsum",
+        price: 120,
+    },
 ];
 
 const Slider = () => {
@@ -49,17 +73,29 @@ const Slider = () => {
                 1024: {
                     slidesPerView: 3,
                 },
-                1174: {
+                1170: {
                     slidesPerView: 4,
                 },
             }}>
             {products.map((product, index) => {
                 const { image, name, description, price } = product;
-                return <SwiperSlide key={index}>
+                return (
+                    <SwiperSlide
+                        key={index}
+                        className="select-none w-full cursor-pointer"
+                    >
                     <div className="bg-gray-50 h-[360px] flex items-center justify-center">
                         <Image src={image} width={240} height={240} quality={100} alt="" />
                     </div>
+                    <div className="w-full pt-4 flex flex-col gap-4">
+                        <div>
+                            <h6 className="font-semibold text-primary mb-1">{name}</h6>
+                            <p>{description}</p>
+                        </div>
+                        <p className="font-semibold text-accent2">{price}</p>
+                    </div>
                 </SwiperSlide>
+                );
             })}
         </Swiper>
     </>;
